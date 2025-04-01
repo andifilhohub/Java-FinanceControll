@@ -1,5 +1,3 @@
-com/financeapi/controller/AuthController.class
-com/financeapi/controller/HomeController.class
 com/financeapi/controller/NotificationController.class
 com/financeapi/config/PaymentMethodInitializer.class
 com/financeapi/model/Expenditures.class
@@ -15,4 +13,3 @@ com/financeapi/controller/ExpendituresController.class
 com/financeapi/repository/PaymentMethodRepository.class
 com/financeapi/controller/PaymentMethodController.class
 com/financeapi/model/Notification.class
-com/financeapi/filter/LoginFilter.class

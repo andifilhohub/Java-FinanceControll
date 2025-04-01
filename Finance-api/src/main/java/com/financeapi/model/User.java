@@ -6,9 +6,11 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Column;
 import java.time.LocalDateTime;
+import javax.persistence.Table;
+
 
 @Entity
-
+@Table(name = "users")
 public class User {
 
 
@@ -26,7 +28,7 @@ public class User {
     private String password;  
 
     @Column(nullable = false, updatable = false)  
-    private LocalDateTime createdAt; 
+    private LocalDateTime createdAt = LocalDateTime.now(); 
 
     private LocalDateTime lastLogin;  
 
@@ -37,7 +39,8 @@ public class User {
     private String role;  
 
     private String phoneNumber;  
-
+    
+  
     private String address;
     private Boolean logged; 
 

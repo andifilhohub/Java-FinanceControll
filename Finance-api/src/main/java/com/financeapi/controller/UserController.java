@@ -10,11 +10,12 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import java.time.LocalDateTime;
 
 
 
 @RestController
-@RequestMapping("/user")
+@RequestMapping("/login")
 public class UserController{
 
     @Autowired
@@ -23,7 +24,7 @@ public class UserController{
     @PostMapping("/create") // Usando PostMapping para salvar dados
     public String saveUser(@RequestBody User user) {
     if (user != null) {
-        //logger.info("Usuário salvo com sucesso: " + user.getName());
+        user.setCreatedAt(LocalDateTime.now());
         userRepository.save(user);
         return "Usuário salvo com sucesso!"; // ✅ Agora retorna uma string
     }
